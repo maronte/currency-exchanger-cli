@@ -3,8 +3,8 @@ import java.util.Map;
 
 public class Exchanger {
     private Currency[] currencies;
-    private ExChangeApiClient apiExchanger;
-    private ExchangeJsonParser parser;
+    private final ExChangeApiClient apiExchanger;
+    private final ExchangeJsonParser parser;
 
     public Exchanger () {
         apiExchanger = new ExChangeApiClient();

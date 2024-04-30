@@ -1,7 +1,7 @@
 import com.google.gson.JsonParser;
 
 public class ExchangeJsonParser {
-    private JsonParser parser = new JsonParser();
+    private final JsonParser parser = new JsonParser();
 
     public ExchangeRate parseFromPair(String json) {
         // Example argument: { "base_code": "USD", "target_code": "EUR", "conversion_rate": 0.85 }

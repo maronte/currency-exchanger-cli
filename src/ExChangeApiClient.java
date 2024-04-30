@@ -21,8 +21,7 @@ public class ExChangeApiClient {
                 .build();
         try {
             var response = this.client.send(request, HttpResponse.BodyHandlers.ofString());
-            var body = response.body();
-            return body;
+            return response.body();
         } catch (IOException | InterruptedException e) {
             return null;
         }
