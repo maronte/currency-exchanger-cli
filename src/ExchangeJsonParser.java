@@ -18,7 +18,7 @@ public class ExchangeJsonParser {
         // Return value: [ new ExchangeRate("USD", 1.0), new ExchangeRate("EUR", 0.85) ]
         var root = parser.parse(json).getAsJsonObject();
         var fromCurrency = root.get("base_code").getAsString();
-        var rates = root.getAsJsonObject("conversionRates");
+        var rates = root.getAsJsonObject("conversion_rates");
         var entries = rates.entrySet();
         var result = new ExchangeRate[entries.size()];
         var i = 0;
